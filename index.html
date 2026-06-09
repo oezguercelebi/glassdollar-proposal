@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GlassDollar Mobile — Proposal &amp; Mockups</title>
+<meta name="description" content="A focused Expo app over GlassDollar's existing backend, built for the buyer on the move. Interactive proposal and concept mockups." />
+
+<!-- Open Graph (Slack, LinkedIn, WhatsApp, iMessage, Facebook) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://oezguercelebi.github.io/glassdollar-proposal/" />
+<meta property="og:title" content="GlassDollar Mobile — Proposal &amp; Mockups" />
+<meta property="og:description" content="A companion for the buyer on the move. Interactive proposal, scope, and concept mockups — prepared by Özgür Celebi." />
+<meta property="og:image" content="https://oezguercelebi.github.io/glassdollar-proposal/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="GlassDollar Mobile" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="GlassDollar Mobile — Proposal &amp; Mockups" />
+<meta name="twitter:description" content="A companion for the buyer on the move. Interactive proposal and concept mockups." />
+<meta name="twitter:image" content="https://oezguercelebi.github.io/glassdollar-proposal/og.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ultra:#001d0f; --dark:#002f18; --mid:#142616;
+    --green:#0acf59; --neon:#38ee45; --bright:#76ff7f;
+    --mint:#dce3dc; --paper:#fafffa; --ink:#0c140f;
+    --gray:#5b665f; --line:#dfe7e0;
+    --serif:'Caudex',Georgia,serif; --sans:'Space Grotesk',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--paper);background:radial-gradient(125% 120% at 78% -10%,#0a3a22 0%,var(--ultra) 55%);min-height:100vh;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  a{color:var(--green);text-decoration:none}
+  h1,h2,h3{font-family:var(--serif)}
+
+  /* decorative glow */
+  body::after{content:"";position:fixed;right:-160px;top:-160px;width:520px;height:520px;border-radius:46px;background:linear-gradient(135deg,rgba(56,238,69,.14),transparent 60%);transform:rotate(20deg);pointer-events:none;z-index:0}
+
+  .hero{position:relative;z-index:1;padding:72px 0 26px}
+  .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--neon);font-weight:600}
+  .hero h1{font-size:56px;line-height:1.03;margin:18px 0 16px;font-weight:700;letter-spacing:-.012em;max-width:13ch}
+  .hero h1 em{font-style:italic;color:var(--bright)}
+  .hero .lead{font-size:19px;max-width:600px;color:#cfe7d8}
+  .meta{display:flex;flex-wrap:wrap;gap:9px 26px;margin-top:28px;font-size:13.5px;color:#9fc4ad}
+  .meta b{color:var(--paper);font-weight:600}
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+  .pill{border:1px solid rgba(56,238,69,.34);color:var(--bright);border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:500}
+
+  /* doc cards */
+  .docs{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:44px 0 16px}
+  .doc{display:flex;flex-direction:column;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.10);border-radius:20px;padding:30px 30px 26px;transition:transform .16s ease,border-color .16s ease,background .16s ease;position:relative;overflow:hidden}
+  .doc:hover{transform:translateY(-4px);border-color:rgba(56,238,69,.45);background:rgba(56,238,69,.06)}
+  .doc .num{font-family:var(--serif);font-size:13px;color:var(--neon);background:rgba(56,238,69,.12);border:1px solid rgba(56,238,69,.3);width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:18px}
+  .doc h2{font-size:27px;margin-bottom:8px;color:var(--paper);letter-spacing:-.01em}
+  .doc p{font-size:14.5px;color:#bcd6c6;margin-bottom:20px;flex:1}
+  .doc .go{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;color:var(--bright)}
+  .doc .go svg{transition:transform .16s ease}
+  .doc:hover .go svg{transform:translateX(4px)}
+  .doc .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+  .doc .tag{font-size:11.5px;color:#9fc4ad;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:7px;padding:3px 9px}
+
+  .foot{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.09);margin-top:36px;padding:26px 0 48px;font-size:13px;color:#8fb6a0}
+  .foot b{color:var(--paper)}
+  .foot .note{margin-top:8px;font-size:12.5px;color:#7fa791}
+
+  @media(max-width:760px){
+    .hero{padding:52px 0 18px}
+    .hero h1{font-size:39px}
+    .docs{grid-template-columns:1fr;gap:16px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">GlassDollar · Mobile · Proposal</div>
+    <h1>A companion for the <em>buyer on the move</em>.</h1>
+    <p class="lead">A focused Expo app over your existing backend — built for the senior, budget-holding user who works from their phone at events and between meetings, not at a desk.</p>
+    <div class="meta">
+      <span>Prepared by <b>Özgür Celebi</b></span>
+      <span>For <b>Stephen · GlassDollar</b></span>
+      <span>Target <b>Mobile support by end of June 2026</b></span>
+    </div>
+    <div class="pillrow">
+      <span class="pill">Expo · React Native</span>
+      <span class="pill">iOS · Android · Web</span>
+      <span class="pill">Your Auth0 + Hasura</span>
+      <span class="pill">Read-mostly · event-first</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="docs">
+
+    <a class="doc" href="./proposal.html">
+      <div class="num">01</div>
+      <div class="tags">
+        <span class="tag">Insight</span><span class="tag">Scope</span><span class="tag">Timeline</span><span class="tag">Investment</span>
+      </div>
+      <h2>The Proposal</h2>
+      <p>The full read: who the app is really for, why Expo, the seven core screens, what's in and out of v1, the three-week plan to end of June, dependencies, risks, and commercials.</p>
+      <span class="go">Read the proposal
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </span>
+    </a>
+
+    <a class="doc" href="./mockups.html">
+      <div class="num">02</div>
+      <div class="tags">
+        <span class="tag">Search</span><span class="tag">Profile</span><span class="tag">QR capture</span><span class="tag">Project</span>
+      </div>
+      <h2>The Mockups</h2>
+      <p>The key journeys drawn on a phone, with real content from your product: instant search, a startup profile, the event QR capture, and a read-only project snapshot. Indicative direction, not final design.</p>
+      <span class="go">See the screens
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </span>
+    </a>
+
+  </div>
+
+  <footer class="foot">
+    <div class="wrap" style="padding:0">
+      <b>GlassDollar Mobile — proposal &amp; concept mockups (draft).</b> Özgür Celebi · June 2026.<br/>
+      <span class="note">Grounded in a live walkthrough of demo.glassdollar.com. Pricing &amp; timeline subject to the scoping session. Yours to keep either way.</span>
+    </div>
+  </footer>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GlassDollar Mobile — Concept Mockups</title>
+<meta name="description" content="The key GlassDollar mobile journeys drawn on a phone: instant search, startup profile, event QR capture, and a read-only project snapshot." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://oezguercelebi.github.io/glassdollar-proposal/mockups.html" />
+<meta property="og:title" content="GlassDollar Mobile — Concept Mockups" />
+<meta property="og:description" content="The key journeys on a phone: search, profile, event QR capture, project snapshot. Indicative direction, not final design." />
+<meta property="og:image" content="https://oezguercelebi.github.io/glassdollar-proposal/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="GlassDollar Mobile" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="GlassDollar Mobile — Concept Mockups" />
+<meta name="twitter:description" content="The key journeys on a phone: search, profile, event QR capture, project snapshot." />
+<meta name="twitter:image" content="https://oezguercelebi.github.io/glassdollar-proposal/og.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ultra:#001d0f; --dark:#002f18; --green:#0a9d4f; --neon:#38ee45; --bright:#76ff7f;
+    --mint:#e7f3ec; --paper:#fafffa; --ink:#0c140f; --gray:#6b766f; --line:#e6ebe7;
+    --serif:'Caudex',Georgia,serif; --sans:'Space Grotesk',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);background:radial-gradient(130% 100% at 80% -10%,#0a3a22,var(--ultra) 60%);color:#fafffa;min-height:100vh;-webkit-font-smoothing:antialiased;padding:0 0 70px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .head{padding:54px 0 30px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--neon);font-weight:600}
+  .head h1{font-family:var(--serif);font-size:42px;margin:14px 0 10px;line-height:1.05}
+  .head h1 em{font-style:italic;color:var(--bright)}
+  .head p{color:#cfe7d8;font-size:16px;max-width:600px}
+  .head .disclaimer{margin-top:16px;font-size:12.5px;color:#8fb6a0;border-left:2px solid rgba(56,238,69,.4);padding-left:12px;max-width:600px}
+
+  .grid{display:flex;flex-wrap:wrap;gap:44px 38px;justify-content:center;padding:18px 0}
+  .frameblock{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .frameblock .cap{font-size:13px;color:#bfe0cd;text-align:center;max-width:300px}
+  .frameblock .cap b{color:#fff;display:block;font-size:14px;margin-bottom:2px}
+
+  /* phone frame */
+  .phone{width:300px;height:632px;background:#05100b;border-radius:42px;padding:11px;box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.04);position:relative}
+  .phone .notch{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:120px;height:24px;background:#05100b;border-radius:0 0 16px 16px;z-index:5}
+  .screen{width:100%;height:100%;background:var(--paper);border-radius:32px;overflow:hidden;display:flex;flex-direction:column;position:relative;color:var(--ink)}
+  .screen.dark{background:linear-gradient(170deg,#06311c,var(--ultra));color:#fafffa}
+
+  .sbar{display:flex;justify-content:space-between;align-items:center;padding:12px 22px 4px;font-size:12px;font-weight:600}
+  .sbar .dots{display:flex;gap:4px;align-items:center}
+  .sbar .bat{width:18px;height:9px;border:1px solid currentColor;border-radius:2px;position:relative;opacity:.8}
+  .sbar .bat::after{content:"";position:absolute;left:1px;top:1px;bottom:1px;width:11px;background:currentColor;border-radius:1px}
+
+  .appbar{display:flex;align-items:center;justify-content:space-between;padding:6px 18px 10px}
+  .brand{font-weight:700;font-size:15px;display:flex;align-items:center;gap:7px}
+  .brand .mark{width:22px;height:22px;display:inline-block;object-fit:contain}
+  .av{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#0a9d4f,#063);border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center}
+  .av svg{width:15px;height:15px;color:#fff}
+
+  .body{flex:1;overflow:hidden;padding:4px 18px 0}
+  .h-screen{font-family:var(--serif);font-size:23px;margin:2px 0 14px}
+
+  .search{display:flex;align-items:center;gap:9px;background:#fff;border:1.5px solid var(--line);border-radius:13px;padding:11px 13px;font-size:14px;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .search svg{flex:0 0 auto;color:var(--gray)}
+  .search .ph{color:var(--gray)}
+  .grouplabel{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);font-weight:600;margin:18px 4px 8px}
+  .crow{display:flex;align-items:center;gap:11px;padding:9px 4px;border-bottom:1px solid var(--line)}
+  .clogo{width:34px;height:34px;border-radius:9px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff}
+  .cmeta{flex:1;min-width:0}
+  .cmeta .cn{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .cmeta .cs{font-size:11.5px;color:var(--gray);margin-top:1px}
+  .addbtn{flex:0 0 auto;width:26px;height:26px;border-radius:8px;border:1.5px solid var(--green);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600}
+  .askai{margin-top:16px;display:flex;align-items:center;gap:9px;background:linear-gradient(100deg,rgba(10,157,79,.1),rgba(56,238,69,.12));border:1px solid rgba(10,157,79,.3);border-radius:12px;padding:12px 13px;font-size:13.5px;font-weight:600;color:#0a7a3c}
+
+  /* profile */
+  .pf-top{display:flex;align-items:center;justify-content:space-between;padding:2px 0 12px}
+  .pf-top .ic{width:30px;height:30px;border-radius:9px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink);background:#fff}
+  .pf-hero{display:flex;gap:13px;align-items:center}
+  .pf-hero .clogo{width:50px;height:50px;border-radius:13px;font-size:18px}
+  .pf-hero .nm{font-family:var(--serif);font-size:21px}
+  .pf-hero .web{font-size:12px;color:var(--green);font-weight:500}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0}
+  .chip{font-size:11px;background:var(--mint);color:#2a5a3c;border-radius:7px;padding:4px 9px;font-weight:500}
+  .chip.tested{background:#0a9d4f;color:#fff}
+  .lab{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);font-weight:600;margin:14px 0 7px}
+  .linkchip{display:inline-flex;align-items:center;gap:6px;font-size:12px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 9px;margin:0 6px 6px 0}
+  .linkchip b{font-weight:600}
+  .pstatus{font-size:10px;padding:2px 6px;border-radius:5px;font-weight:700}
+  .pstatus.impl{background:#e3f6ea;color:#0a7a3c}
+  .pstatus.poc{background:#e6f0fd;color:#1763c7}
+  .desc{font-size:12.5px;color:#44504a;line-height:1.5;margin-top:4px}
+  .custrow{display:flex;gap:7px;margin-top:9px}
+  .custrow .c{width:30px;height:30px;border-radius:8px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#555}
+  .actions{display:flex;gap:9px;padding:12px 0 4px}
+  .btn{flex:1;text-align:center;padding:12px;border-radius:12px;font-weight:600;font-size:13.5px}
+  .btn.primary{background:var(--green);color:#fff}
+  .btn.ghost{background:#fff;border:1.5px solid var(--green);color:var(--green);display:flex;align-items:center;justify-content:center;gap:6px}
+
+  /* QR */
+  .qr-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 26px;text-align:center}
+  .qr-chal{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--neon);font-weight:600;margin-bottom:6px}
+  .qr-title{font-family:var(--serif);font-size:21px;margin-bottom:22px;color:#fff}
+  .qr-card{background:#fff;border-radius:20px;padding:18px;box-shadow:0 14px 40px rgba(0,0,0,.3)}
+  #qr{display:block}
+  .qr-sub{margin-top:22px;font-size:13.5px;color:#cfe7d8;max-width:230px}
+  .qr-hint{margin-top:8px;font-size:11.5px;color:#7fae90}
+  .qr-foot{display:flex;gap:10px;padding:0 22px 4px;width:100%}
+  .qr-foot .btn{background:rgba(255,255,255,.08);border:1px solid rgba(56,238,69,.35);color:var(--bright)}
+  .qr-foot .btn.solid{background:var(--neon);color:var(--ultra);border:none}
+
+  /* project */
+  .pj-status{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#c0392b;background:#fdecea;border-radius:8px;padding:5px 10px;margin-bottom:4px}
+  .pj-status .dot{width:8px;height:8px;border-radius:50%;background:#e74c3c}
+  .pj-h{font-family:var(--serif);font-size:18px;line-height:1.2;margin:8px 0 12px}
+  .ai-box{background:linear-gradient(120deg,rgba(10,157,79,.07),rgba(56,238,69,.07));border:1px solid rgba(10,157,79,.22);border-radius:12px;padding:12px 13px}
+  .ai-box .ai-lab{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#0a7a3c;font-weight:700;display:flex;align-items:center;gap:5px;margin-bottom:5px}
+  .ai-box p{font-size:12.5px;color:#44504a;line-height:1.5}
+  .timeline{display:flex;align-items:flex-start;justify-content:space-between;margin:18px 2px 6px}
+  .step{display:flex;flex-direction:column;align-items:center;flex:1;position:relative;font-size:9px;color:var(--gray);text-align:center}
+  .step .bub{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;margin-bottom:5px;z-index:2;background:#dfe8e2;color:#7a877f}
+  .step.done .bub{background:var(--green);color:#fff}
+  .step.cur .bub{background:#fff;border:2px solid var(--green);color:var(--green)}
+  .step::before{content:"";position:absolute;top:9px;left:-50%;width:100%;height:2px;background:var(--line);z-index:1}
+  .step:first-child::before{display:none}
+  .step.done::before,.step.cur::before{background:var(--green)}
+  .person{display:flex;align-items:center;gap:9px;margin-top:16px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:11px}
+  .person .pa{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#e0a,#a06);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+  .person .pn{font-size:13px;font-weight:600}
+  .person .pr{font-size:11px;color:var(--gray)}
+  .commentbar{display:flex;align-items:center;gap:8px;margin-top:13px;background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:10px 12px;font-size:12.5px;color:var(--gray)}
+
+  /* tabbar */
+  .tabbar{display:flex;justify-content:space-around;align-items:center;padding:11px 8px 16px;border-top:1px solid var(--line);background:#fff}
+  .screen.dark .tabbar{background:rgba(0,0,0,.18);border-top:1px solid rgba(255,255,255,.08)}
+  .tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;color:#9aa7a0;font-weight:500}
+  .tab.active{color:var(--green)}
+  .screen.dark .tab{color:#6f9a80}.screen.dark .tab.active{color:var(--neon)}
+  .tab svg{width:21px;height:21px}
+  @media(max-width:760px){ .head h1{font-size:32px} }
+</style>
+</head>
+<body>
+
+<style>
+  .gx-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px clamp(16px,4vw,40px);background:rgba(0,18,9,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(56,238,69,.18);font-family:'Space Grotesk',system-ui,sans-serif}
+  .gx-brand{font-weight:700;font-size:14.5px;color:#fafffa;letter-spacing:.01em;text-decoration:none}
+  .gx-brand span{color:#38ee45}
+  .gx-links{display:flex;gap:6px}
+  .gx-links a{font-size:13px;font-weight:500;color:#9fc4ad;text-decoration:none;padding:6px 12px;border-radius:8px;transition:color .15s,background .15s}
+  .gx-links a:hover{color:#fafffa;background:rgba(255,255,255,.06)}
+  .gx-links a[aria-current="page"]{color:#001d0f;background:#38ee45;font-weight:600}
+  @media print{.gx-nav{display:none}}
+</style>
+<nav class="gx-nav">
+  <a class="gx-brand" href="./">GlassDollar <span>Mobile</span></a>
+  <div class="gx-links">
+    <a href="./">Overview</a>
+    <a href="./proposal.html">Proposal</a>
+    <a href="./mockups.html" aria-current="page">Mockups</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="head">
+    <div class="eyebrow">GlassDollar Mobile · concept mockups</div>
+    <h1>The key screens, <em>on a phone</em></h1>
+    <p>The four journeys that carry the MVP, drawn with real content from your product. This is the buyer's view: find, save, capture, glance.</p>
+    <div class="disclaimer">Indicative direction, not final design. Brand, spacing, and components get refined during the build and locked in the scoping session.</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- 1. SEARCH -->
+    <div class="frameblock">
+      <div class="phone"><div class="notch"></div><div class="screen">
+        <div class="sbar"><span>9:41</span><span class="dots"><span class="bat"></span></span></div>
+        <div class="appbar"><div class="brand"><img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALEAAAC0CAMAAADsOj1EAAAAY1BMVEVHcExl5RsAxSAAxSAAxSAAxB9d5ihV4iIAxSEExh4KyB0UyxsfzhkizxlA2BR56QuQ/iV66QuK+R+J+B+D8ReP/SQo0hkt1Bp/7xJ/7xOM+iCR/yaC8hVK3hhh5hWI+R2R/yYqf7AOAAAAIXRSTlMAJllxipkLGj6fqLnJ1ryZVIZmRDR34+661qSZx+Xer4poqt/lAAADMUlEQVR4Ae2ZZ67rPAwF6SIp3XKPo7T9b/Ir/2O+CO+EMAHOCghjrubghr6gKKva/Yy69IQlVO7H1IGQFE4Ajzy4dgLsCEftJKgIxs6JUBKMWtvFhZOhIBSlk8ETisop+8PzTobdr18K07gmGLU2jYNpvEIAv22mMT7RprElmsGJYEtTAMrAlqYlGq/x/vD37IuPBI9P9OF4OgO4NCtEcKL3xzMD4uKm9UiN96cziGadDvC24Q8+NQwepzGvRJ4UDAGm8f68wYtL5CdmaDhwGp/OIhp3gETLStHDluZBSAp1Gre4t+0kI4U+jQdAoqWkMI2FpIiwRB9M4xW8tkSPeI2VJxp/cWFL05amLU1L9MaW5vQV8+XKMMaP9AGf6PlrFo5bWiGCNZ5mzMX3tEqXqTHu4MfCcE3rDMClOc0ZPBeGV1onAjWec1g4EsMISDTziTEa8yI7DtwnfvBSMPSwRE8zTONbYgiwt22S0fgN0BguBa8xINGyGg/827ZBjb02jUdAouFSXBNDhGoskOhUABItIAWnMeBtgyZav8Y9bmnKvG3yGluiaaOJtqVpGjNEW5oIKW4yiZ62mOjT5pamQKJtaQq8bbY0lSTalqYtTVuaprHWfwYBlubR/qepIdG2NBUsTbKlaUvTlqb97CiyNC3RvMYqE21L05amLU1bmrY05aXgE02b/70mZHxjoMZPXKKplND4ucCWJpGvcYlmDoYl+j9CBdGYbwdQ4//ZlZ9xF4bHl7DfN19jnrZhuC8ochLNExqOJQOcxjx9w3BdYCQOTxl0aCkAiebBSiGgcdEwvIQ0LtRpTDmMG9C4owz8Ft62HqAxXIqcRPNEQY0FEr2YxoBED/Ia60+0hMa2NFUk2pamLc2btqV5xy3NXkbjFyzRfPGEPnFPOfhWQIp7YgmE+shX7DuRkWie0P5Wivst8XSUTRg+0r8A8OdmJ5qnTzJ4QjEmEUaCkWSIhKJIAkA1junHmMY+ydATiiHJUGjT+E0w3kmEjlAEdRpLJToQii6BMY31J1pKY0u0LU35RJvGnbrXOGi7uCPS1ei3JxyD+MEKTo6esBTdL10eY6A/8y9+s6Ez4FjOdwAAAABJRU5ErkJggg==" alt=""/>GlassDollar</div><div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div></div>
+        <div class="body">
+          <div class="h-screen">Find a startup</div>
+          <div class="search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><span>robotics</span></div>
+          <div class="grouplabel">Companies</div>
+          <div class="crow"><div class="clogo" style="background:#3a7bd5">RA</div><div class="cmeta"><div class="cn">Robotics AI</div><div class="cs">2019 · 🇩🇪 Munich · 51–200</div></div><div class="addbtn">+</div></div>
+          <div class="crow"><div class="clogo" style="background:#16a085">RB</div><div class="cmeta"><div class="cn">RoBo Robotics</div><div class="cs">2020 · 🇺🇸 Boston · 11–50</div></div><div class="addbtn">+</div></div>
+          <div class="crow"><div class="clogo" style="background:#8e44ad">TR</div><div class="cmeta"><div class="cn">T-robotics</div><div class="cs">2018 · 🇰🇷 Seoul · 11–50</div></div><div class="addbtn">+</div></div>
+          <div class="crow"><div class="clogo" style="background:#c0392b">RX</div><div class="cmeta"><div class="cn">Robotix Systems</div><div class="cs">2021 · 🇫🇷 Lyon · 1–10</div></div><div class="addbtn">+</div></div>
+          <div class="grouplabel">Lists</div>
+          <div class="crow"><div class="clogo" style="background:#0a9d4f"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div><div class="cmeta"><div class="cn">Robotics &amp; Automation</div><div class="cs">In project · 14 companies</div></div></div>
+        </div>
+        <div class="tabbar">
+          <div class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Search</div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Lists</div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>Projects</div>        </div>
+      </div></div>
+      <div class="cap"><b>Instant search</b>Keyword to grouped results: companies, lists, projects.</div>
+    </div>
+
+    <!-- 2. PROFILE -->
+    <div class="frameblock">
+      <div class="phone"><div class="notch"></div><div class="screen">
+        <div class="sbar"><span>9:41</span><span class="dots"><span class="bat"></span></span></div>
+        <div class="body" style="padding-top:10px">
+          <div class="pf-top">
+            <div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></div>
+            <div style="display:flex;gap:8px">
+              <div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></div>
+            </div>
+          </div>
+          <div class="pf-hero"><div class="clogo" style="background:#0a3a66">U</div><div><div class="nm">UTwin</div><div class="web">utwin.it ↗</div></div></div>
+          <div class="chips"><span class="chip tested">✓ Tested</span><span class="chip">2020</span><span class="chip">🇮🇹 Torino</span><span class="chip">11–50</span><span class="chip">$893.5K</span></div>
+          <div class="lab">Linked to</div>
+          <div><span class="linkchip"><b>Property Data Digitization</b> <span class="pstatus impl">Implementation</span></span></div>
+          <div class="lab">About</div>
+          <div class="desc">Digital-twin software for building owners and facility managers. Empowers buildings' data with digital twins, helping owners make data-led decisions and cut operating costs. Backed by Techstars and CDP Venture Capital.</div>
+          <div class="lab">Customers</div>
+          <div class="custrow"><div class="c">LAV</div><div class="c">LEO</div><div class="c">SE</div></div>
+        </div>
+        <div class="actions" style="padding:12px 18px 16px">
+          <div class="btn primary">+ Add to list</div>
+          <div class="btn ghost"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>QR</div>
+        </div>
+      </div></div>
+      <div class="cap"><b>Startup profile</b>Aggregated data, add to a list, or pull up the event QR.</div>
+    </div>
+
+    <!-- 3. QR -->
+    <div class="frameblock">
+      <div class="phone"><div class="notch"></div><div class="screen dark">
+        <div class="sbar"><span>9:41</span><span class="dots"><span class="bat"></span></span></div>
+        <div class="qr-wrap">
+          <div class="qr-chal">Event QR · Challenge</div>
+          <div class="qr-title">Sustainability Challenge</div>
+          <div class="qr-card"><svg id="qr" width="190" height="190" viewBox="0 0 190 190"></svg></div>
+          <div class="qr-sub">Startups scan this to submit their pitch straight into your account.</div>
+          <div class="qr-hint">Use it at events or in presentations</div>
+        </div>
+        <div class="qr-foot" style="padding-bottom:16px">
+          <div class="btn solid">Download</div>
+          <div class="btn">Share link</div>
+        </div>
+      </div></div>
+      <div class="cap"><b>QR capture</b>The event hero. Already exists in the product, just re-presented full-screen.</div>
+    </div>
+
+    <!-- 4. PROJECT -->
+    <div class="frameblock">
+      <div class="phone"><div class="notch"></div><div class="screen">
+        <div class="sbar"><span>9:41</span><span class="dots"><span class="bat"></span></span></div>
+        <div class="body" style="padding-top:10px">
+          <div class="pf-top">
+            <div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></div>
+            <div class="lab" style="margin:0;color:#9aa7a0">Read-only</div>
+          </div>
+          <div class="pj-status"><span class="dot"></span>At Risk</div>
+          <div class="pj-h">Improved Piano String Design</div>
+          <div class="ai-box">
+            <div class="ai-lab"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v4M5 12H3M21 12h-2M12 17a5 5 0 0 0 0-10 5 5 0 0 0 0 10z"/></svg>AI summary</div>
+            <p>PoC execution is behind on documentation and impact is still unspecified. Needs a check-in before the next stage gate.</p>
+          </div>
+          <div class="lab">Stage</div>
+          <div class="timeline">
+            <div class="step done"><div class="bub">✓</div>Request</div>
+            <div class="step done"><div class="bub">✓</div>Sourcing</div>
+            <div class="step done"><div class="bub">✓</div>Assess</div>
+            <div class="step cur"><div class="bub">●</div>PoC</div>
+            <div class="step"><div class="bub"></div>Impl.</div>
+          </div>
+          <div class="person"><div class="pa">MA</div><div><div class="pn">Marcel Antin</div><div class="pr">Responsible · Procurement</div></div></div>
+          <div class="commentbar"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Leave a comment…</div>
+        </div>
+        <div class="tabbar">
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Search</div>
+          <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Lists</div>
+          <div class="tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>Projects</div>        </div>
+      </div></div>
+      <div class="cap"><b>Read-only project</b>The "is it on track?" glance. AI summary, timeline, status, comment.</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Draw a believable QR (finder patterns in 3 corners + a deterministic module pattern).
+  (function(){
+    const N = 25, M = 190 / N, svg = document.getElementById('qr');
+    function rect(x,y,w,h){ const r=document.createElementNS('http://www.w3.org/2000/svg','rect'); r.setAttribute('x',x*M);r.setAttribute('y',y*M);r.setAttribute('width',w*M);r.setAttribute('height',h*M);r.setAttribute('fill','#0c140f');svg.appendChild(r); }
+    function finder(ox,oy){ rect(ox,oy,7,7); const w=document.createElementNS('http://www.w3.org/2000/svg','rect'); w.setAttribute('x',(ox+1)*M);w.setAttribute('y',(oy+1)*M);w.setAttribute('width',5*M);w.setAttribute('height',5*M);w.setAttribute('fill','#fff');svg.appendChild(w); rect(ox+2,oy+2,3,3); }
+    function inFinder(x,y){ const f=(a,b)=>x>=a&&x<a+7&&y>=b&&y<b+7; return f(0,0)||f(N-7,0)||f(0,N-7); }
+    for(let y=0;y<N;y++) for(let x=0;x<N;x++){ if(inFinder(x,y)) continue; if(((x*31+y*17+x*y*7)%3)===0) rect(x,y,1,1); }
+    finder(0,0); finder(N-7,0); finder(0,N-7);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  .card{width:1200px;height:630px;position:relative;overflow:hidden;
+    background:radial-gradient(120% 130% at 82% -15%,#0a3a22 0%,#001d0f 56%);
+    color:#fafffa;font-family:'Space Grotesk',system-ui,sans-serif;
+    padding:74px 78px;display:flex;flex-direction:column;justify-content:space-between}
+  .card::after{content:"";position:absolute;right:-130px;top:-140px;width:460px;height:460px;border-radius:48px;
+    background:linear-gradient(135deg,rgba(56,238,69,.18),transparent 62%);transform:rotate(20deg)}
+  .top{position:relative;z-index:2}
+  .eyebrow{font-size:21px;letter-spacing:.26em;text-transform:uppercase;color:#38ee45;font-weight:600}
+  h1{font-family:'Caudex',Georgia,serif;font-size:84px;line-height:1.02;font-weight:700;letter-spacing:-.01em;margin:26px 0 0;max-width:18ch}
+  h1 em{font-style:italic;color:#76ff7f}
+  .lead{font-size:27px;color:#cfe7d8;margin-top:24px;max-width:24ch;line-height:1.4}
+  .bottom{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between}
+  .pills{display:flex;gap:12px}
+  .pill{border:1px solid rgba(56,238,69,.36);color:#76ff7f;border-radius:999px;padding:9px 20px;font-size:18px;font-weight:500}
+  .by{text-align:right;font-size:19px;color:#9fc4ad}
+  .by b{display:block;color:#fafffa;font-weight:600;font-size:21px;font-family:'Caudex',Georgia,serif}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <div class="eyebrow">GlassDollar · Mobile</div>
+    <h1>A companion for the <em>buyer on the move</em>.</h1>
+    <p class="lead">A focused Expo app over your existing backend.</p>
+  </div>
+  <div class="bottom">
+    <div class="pills">
+      <span class="pill">Proposal</span>
+      <span class="pill">Concept mockups</span>
+      <span class="pill">Expo · iOS · Android · Web</span>
+    </div>
+    <div class="by"><b>Özgür Celebi</b>June 2026</div>
+  </div>
+</div>
+</body>
+</html>

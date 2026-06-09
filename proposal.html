@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GlassDollar Mobile — Proposal</title>
+<meta name="description" content="A focused Expo app over GlassDollar's existing backend, built for the buyer on the move. Scope, plan, timeline and investment." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://oezguercelebi.github.io/glassdollar-proposal/proposal.html" />
+<meta property="og:title" content="GlassDollar Mobile — Proposal" />
+<meta property="og:description" content="A companion for the buyer on the move. The full proposal: insight, scope, timeline and investment — by Özgür Celebi." />
+<meta property="og:image" content="https://oezguercelebi.github.io/glassdollar-proposal/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="GlassDollar Mobile" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="GlassDollar Mobile — Proposal" />
+<meta name="twitter:description" content="A companion for the buyer on the move. Scope, plan, timeline and investment." />
+<meta name="twitter:image" content="https://oezguercelebi.github.io/glassdollar-proposal/og.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ultra:#001d0f; --dark:#002f18; --mid:#142616;
+    --green:#0acf59; --neon:#38ee45; --bright:#76ff7f;
+    --mint:#dce3dc; --paper:#fafffa; --ink:#0c140f;
+    --gray:#5b665f; --line:#dfe7e0;
+    --serif:'Caudex',Georgia,serif; --sans:'Space Grotesk',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:0 28px}
+  h1,h2,h3,.serif{font-family:var(--serif)}
+  a{color:var(--green);text-decoration:none}
+
+  /* ---- hero ---- */
+  .hero{background:radial-gradient(120% 140% at 80% -10%,#0a3a22 0%,var(--ultra) 55%);color:var(--paper);padding:64px 0 56px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:34px;background:linear-gradient(135deg,rgba(56,238,69,.16),transparent);transform:rotate(22deg)}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--neon);font-weight:600}
+  .hero h1{font-size:52px;line-height:1.04;margin:16px 0 14px;font-weight:700;letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:var(--bright)}
+  .hero p.lead{font-size:19px;max-width:660px;color:#cfe7d8}
+  .meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;font-size:13.5px;color:#9fc4ad}
+  .meta b{color:var(--paper);font-weight:600}
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .pill{border:1px solid rgba(56,238,69,.34);color:var(--bright);border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:500}
+
+  /* ---- sections ---- */
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  .kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:10px}
+  h2{font-size:30px;letter-spacing:-.01em;margin-bottom:8px}
+  .sub{color:var(--gray);font-size:15px;margin-bottom:26px;max-width:720px}
+  p{margin-bottom:12px}
+
+  .oneliner{font-family:var(--serif);font-size:23px;line-height:1.4;color:var(--dark)}
+  .oneliner b{color:var(--ink);background:linear-gradient(transparent 62%,rgba(56,238,69,.42) 0)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+  .card h3{font-size:17px;margin-bottom:6px;font-family:var(--sans);font-weight:600}
+  .card p{font-size:14px;color:var(--gray);margin:0}
+  .card .src{display:block;margin-top:10px;font-size:11.5px;color:var(--green);font-weight:500}
+
+  table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--mint);font-weight:600;font-size:12.5px;letter-spacing:.02em}
+  tr:last-child td{border-bottom:none}
+  .yes{color:#0a8a3a;font-weight:600}.no{color:#b23b3b;font-weight:600}
+
+  /* screen map */
+  .screens{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .screen{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;position:relative}
+  .screen .n{font-family:var(--serif);font-size:13px;color:var(--neon);background:var(--ultra);width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
+  .screen h3{font-size:16px;font-family:var(--sans);font-weight:600;margin-bottom:5px}
+  .screen p{font-size:13.5px;color:var(--gray);margin:0 0 8px}
+  .screen .from{font-size:11.5px;color:var(--green);font-weight:500}
+  .tag{display:inline-block;background:rgba(56,238,69,.14);color:#0a7a37;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:600;margin-top:8px}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .inout{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+  .inout h3{font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .inout ul{list-style:none;font-size:14px}
+  .inout li{padding:6px 0 6px 24px;position:relative;color:#34403a}
+  .inout.in li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+  .inout.out li::before{content:"✕";position:absolute;left:0;color:var(--gray);font-weight:600}
+  .inout.out li{color:var(--gray)}
+
+  .commercials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .price{background:var(--ultra);color:var(--paper);border-radius:16px;padding:22px}
+  .price .lab{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--neon);font-weight:600}
+  .price .big{font-family:var(--serif);font-size:30px;margin:8px 0 4px}
+  .price .fine{font-size:12.5px;color:#9fc4ad}
+  .terms{margin-top:20px;border-top:1px solid var(--line);padding-top:16px;display:grid;gap:10px;max-width:760px}
+  .terms .trow{display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13.5px;color:#46524b;line-height:1.45}
+  .terms .tk{color:var(--ink);font-weight:600}
+
+  .steps{counter-reset:s;list-style:none}
+  .steps li{counter-increment:s;position:relative;padding:14px 0 14px 52px;border-bottom:1px solid var(--line);font-size:15px}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:11px;width:32px;height:32px;border-radius:50%;background:var(--neon);color:var(--ultra);font-weight:700;display:flex;align-items:center;justify-content:center;font-family:var(--serif)}
+  .steps li:last-child{border-bottom:none}
+
+  .note{background:rgba(56,238,69,.08);border:1px solid rgba(10,207,89,.32);border-radius:12px;padding:14px 18px;font-size:13.5px;color:#22402e;margin-top:18px}
+  .note b{color:var(--dark)}
+
+  footer{background:var(--ultra);color:#9fc4ad;padding:34px 0;font-size:13px}
+  footer b{color:var(--paper)}
+
+  @media(max-width:760px){
+    .hero h1{font-size:38px}.grid2,.screens,.two,.commercials{grid-template-columns:1fr}
+    h2{font-size:25px}.oneliner{font-size:20px}
+  }
+  @media print{.hero::after{display:none}body{background:#fff}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<style>
+  .gx-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px clamp(16px,4vw,40px);background:rgba(0,18,9,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(56,238,69,.18);font-family:'Space Grotesk',system-ui,sans-serif}
+  .gx-brand{font-weight:700;font-size:14.5px;color:#fafffa;letter-spacing:.01em;text-decoration:none}
+  .gx-brand span{color:#38ee45}
+  .gx-links{display:flex;gap:6px}
+  .gx-links a{font-size:13px;font-weight:500;color:#9fc4ad;text-decoration:none;padding:6px 12px;border-radius:8px;transition:color .15s,background .15s}
+  .gx-links a:hover{color:#fafffa;background:rgba(255,255,255,.06)}
+  .gx-links a[aria-current="page"]{color:#001d0f;background:#38ee45;font-weight:600}
+  @media print{.gx-nav{display:none}}
+</style>
+<nav class="gx-nav">
+  <a class="gx-brand" href="./">GlassDollar <span>Mobile</span></a>
+  <div class="gx-links">
+    <a href="./">Overview</a>
+    <a href="./proposal.html" aria-current="page">Proposal</a>
+    <a href="./mockups.html">Mockups</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Proposal · Draft</div>
+    <h1>GlassDollar <em>Mobile</em><br/>A companion for the buyer on the move.</h1>
+    <p class="lead">A focused Expo app over your existing backend, built for the senior, budget-holding user who works from their phone at events and between meetings, not at a desk.</p>
+    <div class="meta">
+      <span>Prepared by <b>Özgür Celebi</b></span>
+      <span>For <b>Stephen · GlassDollar</b></span>
+      <span>Target <b>Mobile support by end of June 2026</b></span>
+    </div>
+    <div class="pillrow">
+      <span class="pill">Expo · React Native</span>
+      <span class="pill">iOS · Android · Web</span>
+      <span class="pill">Your Auth0 + Hasura · no backend work</span>
+      <span class="pill">Read-mostly · event-first</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">In one line</div>
+    <p class="oneliner">A <b>front-end-only Expo app</b> that gives your on-the-go buyers the few journeys that matter on a phone: <b>find a startup, save it, hand them a QR, glance at a project</b>. Shipped as an installable hybrid app over the same Auth0 + Hasura the web product already runs on.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">The insight it's built on</div>
+    <h2>The buyer isn't the daily user</h2>
+    <p class="sub">Direction taken straight from the kickoff call. This is what reorders the scope away from "shrink the desktop app."</p>
+    <div class="grid2">
+      <div class="card"><h3>Two-sided reality</h3><p>The budget owners (C-level) who pay for it use it on the move. The teams they pay for (innovation managers) work at the desk all day. The app serves the <b>buyer</b>, not the whole desktop product shrunk down.</p></div>
+      <div class="card"><h3>The hero moment is events</h3><p>"I'm at a fair, I want to find a startup and get them into my database." Search → profile → <b>save to a list</b>, and show your <b>event QR</b> so startups self-submit their pitch into your account.</p></div>
+      <div class="card"><h3>The commitment</h3><p>You've committed <b>mobile support to a customer for end of June</b>. As you described it, that doesn't hinge on an App Store listing. A polished hybrid experience meets it.</p></div>
+      <div class="card"><h3>But not web-only</h3><p>You want a real mobile experience. And the current desktop SPA already <b>breaks at phone width</b> (verified), so retrofitting responsive is neither cheap nor good.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Approach</div>
+    <h2>Why Expo</h2>
+    <p class="sub">One React codebase for iOS, Android, and web, reusing your stack and hedging the App-Store / corporate-IT-clearance risk.</p>
+    <table>
+      <tr><th>Option</th><th>Verdict</th></tr>
+      <tr><td><b>Expo (React Native)</b> <span class="yes">✓ chosen</span></td><td>One codebase → iOS + Android + web. Reuses Auth0 + Hasura + PostHog/Sentry. Ships hybrid now, submits to stores later. Fast: reuses your existing components for a faithful, mobile-adapted UI.</td></tr>
+      <tr><td>Native (Swift/Kotlin) <span class="no">✗</span></td><td>Two codebases, slower, no reuse. Can't hit end-of-June.</td></tr>
+      <tr><td>Web-only / home-screen bookmark <span class="no">✗</span></td><td>Poor auth + UX, you don't want it, and the desktop SPA already breaks on phones.</td></tr>
+    </table>
+    <div class="note"><b>Backend, confirmed from the live demo and ready to consume:</b> Auth = <b>Auth0</b> with Organizations (multi-tenant), data = <b>Hasura GraphQL</b>, analytics = <b>PostHog</b>, errors = <b>Sentry</b>. The Expo app is a thin native client over the same API the web app uses. <b>I don't touch the backend.</b></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">MVP · in scope</div>
+    <h2>The core journeys, screen by screen</h2>
+    <p class="sub">Each mobile screen is reduced from a real screen in your product, so this is grounded, not invented.</p>
+    <div class="screens">
+      <div class="screen"><div class="n">1</div><h3>Sign in</h3><p>Auth0, tenant-aware, no onboarding (existing customers). Biometric unlock optional.</p><span class="from">↳ Auth0 login</span></div>
+      <div class="screen"><div class="n">2</div><h3>Instant search</h3><p>Keyword → grouped results: companies, lists, projects. Tap a company → profile. Synchronous and simple, the right fit for finding a known startup at an event.</p><span class="from">↳ ⌘K omnibox</span><span class="tag">the everyday search</span></div>
+      <div class="screen"><div class="n">3</div><h3>Startup profile</h3><p>Aggregated profile (Crunchbase/CB Insights/PitchBook): description, customers, investors, similar, linked projects + status. Add to list · Share.</p><span class="from">↳ profile panel</span></div>
+      <div class="screen"><div class="n">4</div><h3>QR capture</h3><p>Show a Challenge's QR full-screen at events. Startups scan it to self-submit their pitch, landing as applications in your account.</p><span class="from">↳ Open Challenges → Share → QR</span><span class="tag">event hero feature</span></div>
+      <div class="screen"><div class="n">5</div><h3>Lists / Library</h3><p>"Playlist" experience: browse lists, open a list as a scrollable stack of startup cards, add to list, create a list, Share.</p><span class="from">↳ Lists + list matrix</span></div>
+      <div class="screen"><div class="n">6</div><h3>Read-only project</h3><p>Snapshot: AI summary, stage timeline, status (e.g. <b>At Risk</b>), responsible person. Can comment, cannot edit or run.</p><span class="from">↳ PoC detail</span></div>
+      <div class="screen"><div class="n">7</div><h3>Account</h3><p>Minimal profile/settings, tenant indicator, sign-out.</p><span class="from">↳ new</span></div>
+    </div>
+    <div class="note"><b>QR is lower-risk than it looks:</b> the QR-at-events feature <b>already exists</b> in the web product (Open Challenges → Share → QR, with Download). Mobile mainly re-presents it for scanning and shows incoming applications.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Scope discipline</div>
+    <h2>What we build, and what we don't</h2>
+    <div class="two">
+      <div class="inout in">
+        <h3>In: v1 MVP</h3>
+        <ul>
+          <li>Auth0 sign-in (tenant-aware)</li>
+          <li>Instant keyword search</li>
+          <li>Startup profile + Add to list</li>
+          <li>QR pitch capture for events</li>
+          <li>Lists / Library (view · add · create)</li>
+          <li>Read-only project snapshot + comment</li>
+          <li>Account</li>
+        </ul>
+      </div>
+      <div class="inout out">
+        <h3>Out of v1</h3>
+        <ul>
+          <li>Innovation Hub</li>
+          <li>CRM / Business Units</li>
+          <li>Project editing / running</li>
+          <li>Documents, business-case tables</li>
+          <li>Full SourceAI criteria/Benchmark/Landscape → <b>Phase 2</b></li>
+          <li>Push notifications &amp; approvals → <b>Phase 2</b></li>
+          <li>Financial / ROI dashboard → <b>Phase 2</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Plan</div>
+    <h2>Timeline to end of June</h2>
+    <p class="sub">Now to end of June, about 3 weeks. NDA signed and demo access granted, so the build starts now on backend-independent work while dev access is arranged. (Effort estimate ~20 working days, see Investment.)</p>
+    <table>
+      <tr><th>Week</th><th>Focus</th></tr>
+      <tr><td><b>1 (now)</b></td><td>Expo scaffold · navigation + design system (brand) · first screens (auth, search, profile) on mock data (no backend dependency) · scoping session locks the screen list.</td></tr>
+      <tr><td><b>2</b></td><td>Auth0 login + Apollo/Hasura wiring (once access lands) · instant search · startup profile · Lists index + detail.</td></tr>
+      <tr><td><b>3</b></td><td>Add/create list · read-only project snapshot + comment · QR capture · polish · hybrid/web deploy · on-device QA · handoff.</td></tr>
+    </table>
+    <div class="note"><b>The build clock starts when your dev team hands over backend access</b> (Auth0 native client + Hasura). Front-loading the mock-data UI protects most of the 20 days from that dependency.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Access &amp; dependencies</div>
+    <h2>What I need from your team</h2>
+    <div class="grid2">
+      <div class="card"><h3>Auth0 <span class="tag">starts the clock</span></h3><p>A native-app client + mobile callback URIs. Confirm the Organizations / SSO setup for tenant login.</p></div>
+      <div class="card"><h3>Hasura <span class="tag">starts the clock</span></h3><p>API access + schema. Confirm queries/fields for search, profiles, lists, projects.</p></div>
+      <div class="card"><h3>Challenge &amp; applications API</h3><p>The Challenge share-link/QR + the applications it collects, for the event QR feature.</p></div>
+      <div class="card"><h3>Repository access</h3><p>Read access to the web-app repo (to reuse components, 1:1 UI), plus an Expo repo to ship to (yours or one I set up).</p></div>
+      <div class="card"><h3>Store accounts <span class="tag">Phase 2</span></h3><p>Apple Developer (org) + Google Play Console under GlassDollar. Apple's D-U-N-S verification can take 1–2 weeks, so start early.</p></div>
+      <div class="card"><h3>Brand + contact</h3><p>Source-of-truth tokens / Figma if one exists, and a dev-team point of contact.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Assumptions</div>
+    <h2>What we need to hit the date</h2>
+    <p class="sub">The plan is achievable but tight, and leans on a few things on your side. Naming them so there are no surprises, and so the date moves with reality, not against it.</p>
+    <table>
+      <tr><th>Risk</th><th>If it slips…</th><th>Mitigation · owner</th></tr>
+      <tr><td><b>Backend access delay</b><br/>Auth0 client + Hasura</td><td>This <b>starts the build clock</b>: every day late pushes delivery out day-for-day.</td><td>Full UI on <b>mock data from day 1</b>, deadline measured from access handover. · <i>GlassDollar dev</i></td></tr>
+      <tr><td><b>Repository access</b><br/>web repo + Expo repo</td><td>No web repo → slower, no 1:1 UI reuse. No target repo → nowhere to ship.</td><td>Read access to web repo + an Expo repo in week 1. · <i>GlassDollar</i></td></tr>
+      <tr><td><b>Store accounts</b><br/>Apple Developer + Google Play</td><td>Apple D-U-N-S org verification can take <b>1–2 weeks</b>, and can gate a native launch.</td><td><b>Hybrid/web covers the deadline</b>. Stores are Phase 2. Start enrolment now. · <i>GlassDollar + Özgür</i></td></tr>
+      <tr><td><b>Corporate IT clearance</b><br/>e.g. VW, for a native app</td><td>A new native app may need fresh IT clearance the web app already has.</td><td>Ship hybrid/web for the deadline. Clearance pursued for stores in Phase 2. · <i>GlassDollar</i></td></tr>
+      <tr><td><b>Corporate SSO</b> on the contracted customer</td><td>Enterprise SSO login changes the mobile auth flow, and surprises cost days.</td><td>Confirm the customer's exact login method at scoping. · <i>Both</i></td></tr>
+      <tr><td><b>Scope creep</b></td><td>Near-endless product surface, so additions blow the 20 days.</td><td>Screen list <b>locked at scoping</b>. Changes via change request at the day rate. · <i>Both</i></td></tr>
+    </table>
+    <div class="note"><b>The headline:</b> the biggest threat to end-of-June isn't build speed. It's <b>access-handover timing</b>. The committed date assumes backend + repo access by the start of Week 2.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Commercials · draft</div>
+    <h2>Investment</h2>
+    <p class="sub">Day rate fixed. The MVP is a 20-day fixed-scope estimate, pinned at the scoping session.</p>
+    <div class="commercials">
+      <div class="price"><div class="lab">Day rate</div><div class="big">€1,100</div><div class="fine">Solo, senior: product + design + build in one.</div></div>
+      <div class="price"><div class="lab">MVP · Phase 1</div><div class="big">€22,000</div><div class="fine">20 working days. Reuses your components, faithful to your UI.</div></div>
+      <div class="price"><div class="lab">Maintenance (optional)</div><div class="big">€2–3k<span style="font-size:14px">/mo</span></div><div class="fine">~2–3 days/mo: bug fixes + small features once live.</div></div>
+    </div>
+    <p class="sub" style="margin-top:18px"><b style="color:var(--ink)">Payment</b> 50% to begin, due on signing (before kickoff). Remaining 50% on delivery of the build, net 14 days. Ownership and acceptance covered in the SOW.</p>
+  </div>
+</section>
+
+<section style="border-bottom:none">
+  <div class="wrap">
+    <div class="kicker">Next steps</div>
+    <h2>How we start</h2>
+    <ol class="steps">
+      <li><b>NDA signed ✓ · demo access granted ✓.</b></li>
+      <li><b>In-person scoping session</b> in Berlin: lock the screen list, cut or add against this doc.</li>
+      <li><b>Backend access</b> from your dev team (Auth0 native client + Hasura): this starts the build clock.</li>
+      <li><b>Start building</b>: mock-data UI can begin today, in parallel.</li>
+    </ol>
+    <div class="note">Yours to keep either way: even if we don't proceed, reuse any of this.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>GlassDollar Mobile Proposal (draft)</b> · Özgür Celebi · June 2026<br/>
+    Grounded in a live walkthrough of demo.glassdollar.com. Pricing &amp; timeline subject to scoping.
+  </div>
+</footer>
+
+</body>
+</html>
